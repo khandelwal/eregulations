@@ -44,12 +44,6 @@
     and is a public domain work of the United States Government. 
 </p>
 
-<p>
-    There are three parts to the eRegulations application: a parser that
-    converts regulation text into data, an API that hosts this data, and the
-    actual application itself which uses the data from the API to construct
-    beautiful and usable regulations. 
-</p>
 
 <h3> Features </h3>
 
@@ -76,7 +70,11 @@
         <strong>Bookmarks</strong>
     </li>
     <li>
-        <strong>Internal and external citations</strong>
+        <strong>Internal and external citations</strong> The parser parses out
+        all internal and external citations in the regulation, and we display
+        all citations as clickable links allowing easy navigation with a
+        regulation, and externally to the relevant statutes, acts and other
+        relevant material. 
     </li>
     <li>
         <strong>Search</strong>
@@ -89,6 +87,20 @@
     </li>
 
 </ul>
+
+<h3> Architecture </h3>
+
+<p>
+    There are three parts to the eRegulations application: a parser that
+    converts regulation text into data (<a
+    href="http://github.com/CFPB/regulations-parser">regulations-parser</a>),
+    an API that hosts this data (<a
+    href="http://github.com/eregs/regulations-core">regulations-core</a>), and
+    the actual application itself which uses the data from the API to construct
+    beautiful and usable regulations (<a 
+    href="http://github.com/eregs/regulations-site">regulations-site</a>).
+</p>
+
 
 <h3>
 <a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Technology</h3>
@@ -104,13 +116,12 @@ for unit testing. On the back-end regulations-site is a Django application.
 </p>
 
 
-      </section>
+</section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/CFPB">The Consumer Financial Protection Bureau.</a></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    
   </body>
 </html>
