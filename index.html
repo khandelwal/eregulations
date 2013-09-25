@@ -18,7 +18,7 @@
         <h1>eRegulations</h1>
         <p>Making regulations easily readable, accessible and understandable.</p>
 
-        <p class="view"><small>eRegulations is three repositories:</small></p>
+        <p class="view"><small>eRegulations is composed of three repositories:</small></p>
 
         <p class="view">
             <a href="https://github.com/cfpb/regulations-parser">regulations-parser<small>Parse regulations</small></a>
@@ -51,12 +51,19 @@
 
 <ul>
 
+    <li>
+      <string>Navigability.</string> While regulations are traditionally represented as 
+      monolithic blocks of text, they contain a great deal of embedded structure. 
+      eRegulations teases out that structure and uses it to present the text in a clean, 
+      readable form.
+    </li>
+
     <li> 
     <strong> Inline Interpretations. </strong>  Many regulation paragraphs have official
     interpretations that have traditionally been displayed at the end of the
     regulation, forcing readers to swap back and forth between the regulation
     content and interpretation at the end. eRegulations parses the
-    intpretations for each paragraph, and displays them right under the
+    interpretations for each paragraph, and displays them right under the
     paragraph/section being interpreted. 
     </li>
 
@@ -74,9 +81,8 @@
     <li>
         <strong>Internal and external citations</strong> The parser parses out
         all internal and external citations in the regulation, and we display
-        all citations as clickable links allowing easy navigation within a
-        regulation, and externally to the relevant statutes, acts and other
-        relevant material. 
+        them as clickable links allowing easy navigation within a regulation, 
+        and externally to statutes, acts and other relevant material. 
     </li>
     <li>
         <strong>Search</strong>
@@ -93,14 +99,17 @@
     </li>
     <li>
         <strong>Effective regulation</strong> A user can also enter in a date,
-        and retrieve the version of the regulation relevant at that point in time. 
+        and retrieve the version of the regulation effective at that point in time. 
     </li>
     <li>
-        <strong>Section-by-section analysis</strong>
+        <strong>Section-by-section analysis</strong> The notices that compose a
+        version of the regulation contain relevant analyses of the altered sections.
+        We automatically pull that information out and make it accessible while
+        reading the regulation text.
     </li>
     <li>
-        <strong>Responsive Design</strong>.` The application design is
-        responsive which means that it displays sensibly on small screens. 
+        <strong>Responsive Design</strong>. The application design is
+        responsive, adjusting to the device and screen size of the user.
     </li>
 
 </ul>
@@ -113,7 +122,7 @@
     href="http://github.com/CFPB/regulations-parser">regulations-parser</a>),
     an API that hosts this data (<a
     href="http://github.com/eregs/regulations-core">regulations-core</a>), and
-    the actual application itself which uses the data from the API to construct
+    a webapp which uses the data from the API to construct
     beautiful and usable regulations (<a 
     href="http://github.com/eregs/regulations-site">regulations-site</a>).
 </p>
@@ -126,7 +135,7 @@ would then use regulations-core to as necessary to display regulations.  </p>
 
 <p> regulations-parser is written in Python. </p>
 
-<p> regulations-core is a MySQL backed Django application. </p>
+<p> regulations-core is a Django and Haystack application. </p>
 
 <p>
 The regulations-site front-end is a Backbone.js application nested within AMD
@@ -136,10 +145,10 @@ for unit testing. On the back-end regulations-site is a Django application.
 
 <h3> Open Source and Contributing </h3>
 
-We invite contributions to any part of the application. The project is in the
+<p></p>We invite contributions to any part of the application. The project is in the
 public domain, and all contributions to it will be released as such. By
 submitting a pull request, you are agreeing to comply with the following
-contributor agreement:
+contributor agreement:</p>
 
 <code>
 I dedicate any and all copyright interest in this software to the public
