@@ -118,7 +118,8 @@ a {
 a,
 a:link,
 a:visited {
-    color: #0072ce; 
+    color: #0072ce;
+    border-bottom: 1px dotted #0072ce;
     text-decoration: none; 
 }
 
@@ -151,6 +152,12 @@ Navigation
     padding: .5em 0;
     -webkit-transition: .4s; -moz-transition: .4s;
     transition: .4s;
+}
+
+nav a,
+nav a:link,
+nav a:visited {
+    border-bottom: none;
 }
 
 nav ul {
@@ -224,6 +231,12 @@ Style
 footer {
     font-size: 0.75em;
     color: #75787B;
+}
+
+footer a,
+footer a:link,
+footer a:visited {
+    border-bottom: none;
 }
 
 li h4 {
