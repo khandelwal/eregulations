@@ -74,7 +74,7 @@ h1 {
     font-size: 1.25em;
     color: #75787B;
     margin: 0;
-    line-height: 58px;
+    line-height: 54px;
     display: inline-block;
     float: left;
 }
@@ -232,12 +232,6 @@ Style
 footer {
     font-size: 0.75em;
     color: #75787B;
-}
-
-footer a,
-footer a:link,
-footer a:visited {
-    border-bottom: none;
 }
 
 li h4 {
