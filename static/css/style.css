@@ -225,6 +225,7 @@ Style
 .logo {
     width: 150px;
     margin-top: .75em; /*this is a pretty hacky job of vertically centering the logo */
+    padding-right: 20px;
     float: right;
 }
 
