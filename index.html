@@ -6,45 +6,68 @@
     <title>eRegulations by eregs</title>
     <link rel="stylesheet" href="static/css/normalize.css">
     <link rel="stylesheet" href="static/css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
   <body>
-  <div class="wrap">
-      <header>
+    <header>
+      <div class="wrap">
         <h1>eRegulations</h1>
-        <p>Making regulations easily readable, accessible and understandable.</p>
-      </header>
+      </div>
+    </header>
 
-      <p>eRegulations is composed of three repositories:</p>
+  <div class="wrap content">
 
-      <ul>
-        <li>
-          <a href="https://github.com/cfpb/regulations-parser"><strong>regulations-parser</strong> Parse regulations</a>
-        </li>
+    <aside>
+      <p class="intro">Making regulations easily readable, accessible and understandable.</p>
+      <nav>
+        <ul>
+          <li><a href="#repositories">Repositories</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#architecture">Architecture</a></li>
+          <li><a href="technlogy">Technology</a></li>
+          <li><a href="#open-source">Open Source Contributing</a></li>
+        </ul>
+      </nav>
+    </aside>
 
-        <li>
-          <a href="https://github.com/eregs/regulations-core"><strong>regulations-core</strong> Regulations API</a>
-        </li>
+    <section class="main-content" role="main">
 
-        <li>
-          <a href="https://github.com/eregs/regulations-site"><strong>regulations-site</strong> Display the regulations</a>
-        </li>
-      </ul>
-
-  <section>
-
-    <h3>eRegulations</h3>
-
-  <p> 
-      eRegulations is a web-based application that makes regulations easy to
+      <p>eRegulations is a web-based application that makes regulations easy to
       find, read and understand. It is a work in progress by the <a
       href="http://consumerfinance.gov">Consumer Financial Protection Bureau</a>,
-      and is a public domain work of the United States Government. 
-  </p>
+      and is a public domain work of the United States Government.</p>
 
+      <section id="repositories">
+      <h3>Repositories</h3>
+      <ul class="repo-list">
+        <li>
+          <p class="image-wrap"><img src="static/img/octocat.png" width="25px" title="Github"></p>
+        </li>
+        <li>
+          <a href="https://github.com/cfpb/regulations-parser">
+            <h4>regulations-parser</h4> 
+            <p>Parse regulations</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://github.com/eregs/regulations-core">
+            <h4>regulations-core</h4>
+            <p>Regulations API</p>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://github.com/eregs/regulations-site">
+            <h4>regulations-site</h4>
+            <p>Display the regulations</p>
+          </a>
+        </li>
+      </ul>
+    </section>
 
   <h3>Features</h3>
 
@@ -52,86 +75,86 @@
 
   <ul>
 
-      <li>
-        <strong>Navigability.</strong> While regulations are traditionally represented as 
-        monolithic blocks of text, they contain a great deal of embedded structure. 
-        eRegulations teases out that structure and uses it to present the text in a clean, 
-        readable form.
-      </li>
+    <li>
+      <strong>Navigability.</strong> While regulations are traditionally represented as 
+      monolithic blocks of text, they contain a great deal of embedded structure. 
+      eRegulations teases out that structure and uses it to present the text in a clean, 
+      readable form.
+    </li>
 
-      <li> 
+    <li> 
       <strong> Inline Interpretations.</strong> Many regulation paragraphs have official
       interpretations that have traditionally been displayed at the end of the
       regulation, forcing readers to swap back and forth between the regulation
       content and interpretation at the end. eRegulations parses the
       interpretations for each paragraph, and displays them right under the
       paragraph/section being interpreted. 
-      </li>
+    </li>
 
-      <li> 
+    <li> 
       <strong>Definitions.</strong> We highlight words that have been defined in the regulation,
       and the user can click on the word and see it's definition without
       scrolling to the part of the regulation that defines that word.
-      </li>
+    </li>
 
-      <li>
-          <strong>Bookmarks.</strong> Each paragraph of a regulation can be
-          bookmarked and retrieved individually. This allows users to pass these
-          bookmarks around, sharing parts of the regulations. 
-      </li>
+    <li>
+      <strong>Bookmarks.</strong> Each paragraph of a regulation can be
+      bookmarked and retrieved individually. This allows users to pass these
+      bookmarks around, sharing parts of the regulations. 
+    </li>
 
-      <li>
-          <strong>Internal and external citations.</strong> The parser parses out
-          all internal and external citations in the regulation, and we display
-          them as clickable links allowing easy navigation within a regulation, 
-          and externally to statutes, acts and other relevant material. 
-      </li>
+    <li>
+      <strong>Internal and external citations.</strong> The parser parses out
+      all internal and external citations in the regulation, and we display
+      them as clickable links allowing easy navigation within a regulation, 
+      and externally to statutes, acts and other relevant material. 
+    </li>
 
-      <li>
-          <strong>Search.</strong>
-          We provide the ability to search for phrases across various versions of
-          a regulation. 
-      </li>
+    <li>
+      <strong>Search.</strong>
+      We provide the ability to search for phrases across various versions of
+      a regulation. 
+    </li>
 
-      <li>
-          <strong>Alternate versions of the regulations.</strong>
+    <li>
+      <strong>Alternate versions of the regulations.</strong>
 
-          Regulations are evolving documents and are often displayed as changes
-          to the base text. We present whole versions of regulations for each set
-          of changes (We combine Final Rules that have a common effective date
-          into a version). 
-      </li>
+      Regulations are evolving documents and are often displayed as changes
+      to the base text. We present whole versions of regulations for each set
+      of changes (We combine Final Rules that have a common effective date
+      into a version). 
+    </li>
 
-      <li>
-          <strong>Effective regulation.</strong> A user can also enter in a date,
-          and retrieve the version of the regulation effective at that point in time. 
-      </li>
+    <li>
+      <strong>Effective regulation.</strong> A user can also enter in a date,
+      and retrieve the version of the regulation effective at that point in time. 
+    </li>
 
-      <li>
-          <strong>Section-by-section analysis.</strong> The notices that compose a
-          version of the regulation contain relevant analyses of the altered sections.
-          We automatically pull that information out and make it accessible while
-          reading the regulation text.
-      </li>
+    <li>
+      <strong>Section-by-section analysis.</strong> The notices that compose a
+      version of the regulation contain relevant analyses of the altered sections.
+      We automatically pull that information out and make it accessible while
+      reading the regulation text.
+    </li>
 
-      <li>
-          <strong>Responsive Design.</strong>. The application design is
-          responsive, adjusting to the device and screen size of the user.
-      </li>
+    <li>
+      <strong>Responsive Design.</strong>. The application design is
+      responsive, adjusting to the device and screen size of the user.
+    </li>
 
   </ul>
 
   <h3>Architecture</h3>
 
   <p>
-      There are three parts to the eRegulations application: a parser that
-      converts regulation text into data (<a
-      href="http://github.com/CFPB/regulations-parser">regulations-parser</a>),
-      an API that hosts this data (<a
-      href="http://github.com/eregs/regulations-core">regulations-core</a>), and
-      a webapp which uses the data from the API to construct
-      beautiful and usable regulations (<a 
-      href="http://github.com/eregs/regulations-site">regulations-site</a>).
+    There are three parts to the eRegulations application: a parser that
+    converts regulation text into data (<a
+    href="http://github.com/CFPB/regulations-parser">regulations-parser</a>),
+    an API that hosts this data (<a
+    href="http://github.com/eregs/regulations-core">regulations-core</a>), and
+    a webapp which uses the data from the API to construct
+    beautiful and usable regulations (<a 
+    href="http://github.com/eregs/regulations-site">regulations-site</a>).
   </p>
 
   <p> One would typically run the parser against a regulation once (for each

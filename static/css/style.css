@@ -1,6 +1,7 @@
 /*
 Style.css
 ==================================
+Begin with generic 'mobile first' styles
 */
 
 
@@ -48,6 +49,65 @@ body {
     line-height: 1.875;
 }
 
+h1,
+h2,
+h3,
+h4,
+strong {
+    font-family: "Avenir Next Demi", Arial, sans-serif;
+    font-weight: normal;
+}
+
+/*
+Links
+==================================
+*/
+
+a {
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    transition: .2s;
+}
+
+a,
+a:link,
+a:visited {
+    color: #0072ce; 
+    text-decoration: none; 
+}
+
+a:hover {
+    border-bottom: 1px solid #7eb8dd; 
+    color: #7eb8dd; 
+    text-decoration: none;
+}
+
+a:active {
+    border-bottom: 1px solid #002d72; 
+    color: #002d72; 
+    text-decoration: none;
+}
+
+a:focus {
+    border-bottom: 1px solid #0072ce; 
+    color: #0072ce; 
+    outline: thin dotted; 
+    text-decoration: none;
+}
+
+/*
+Navigation
+==================================
+*/
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+}
 
 
 /*
@@ -55,10 +115,31 @@ Layout
 ==================================
 */
 
+/* offset the fixed position header for jump links */
+section:before {
+    display:block; 
+    content:""; 
+    height:100px; 
+    margin:-100px 0 0; 
+}
+
 .wrap {
     max-width: 820px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
+}
+
+header {
+    width: 100%;
+    border-top: 4px solid #2CB34A;
+    border-bottom: 1px solid #BABBBD;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+}
+
+.content {
+    margin-top: 120px;
 }
 
 
@@ -66,6 +147,94 @@ Layout
 Style
 ==================================
 */
-body {
-    border-top: 4px solid #2CB34A;
+
+.intro {
+    color: #75787B;
+}
+
+footer {
+    font-size: 0.75em;
+    color: #75787B;
+}
+
+/*
+Repo list
+----------------------------------
+*/
+
+.repo-list {
+    margin: 0;
+    padding: 0;
+}
+
+.repo-list li {
+    list-style: none;
+}
+
+.repo-list h4,
+.repo-list p {
+    margin: 0;
+}
+
+/*
+Desktop Styles
+==================================
+*/
+@media screen and (min-width: 40.5em) {
+
+    /*
+    Layout
+    ==============================
+    */
+
+    aside {
+        position: fixed;
+        top: 100px;
+        width: 245px;
+        padding-right: 15px;
+        height: 100%;
+    }
+
+    footer {
+        position: fixed;
+        width: 235px;
+        bottom: 20px;
+    }
+
+    .main-content {
+        width: 67%;
+        float: right;
+    }
+
+    /*
+    Style
+    ==============================
+    */
+
+    /*
+    Repo list
+    ------------------------------
+    */
+
+    .repo-list li {
+        list-style: none;
+        display: table-cell;
+        vertical-align:middle;
+        padding: .625em 1em;
+        background-color: #E7E7E6;
+        border-left: 1px solid #BABBBD;
+    }
+
+    .repo-list li:first-child {
+        border-left: none;
+    }
+
+    }
+
+/*
+Mobile Styles
+==================================
+*/
+@media screen and (max-width: 40.5em) {
+
 }
