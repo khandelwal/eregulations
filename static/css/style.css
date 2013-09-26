@@ -38,6 +38,16 @@ Begin with generic 'mobile first' styles
 }
 
 /*
+Normalize the box model
+==================================
+*/
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+/*
 Typography
 ==================================
 */
@@ -53,9 +63,42 @@ h1,
 h2,
 h3,
 h4,
+h5,
 strong {
     font-family: "Avenir Next Demi", Arial, sans-serif;
     font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 1.625em;
+    color: #75787B;
+}
+
+h2 {
+    font-size: 1.375em;
+    margin: 1.4em 0 0 0;
+}
+
+/*
+Lists
+--------------------------------
+*/
+.main-content ul {
+    padding-left: 1.1em;
+}
+
+.main-content li {
+    margin-bottom: 1em;
+}
+
+li h3,
+li h4 {
+    margin: 0;
+}
+
+li p {
+    margin-top: 0;
 }
 
 /*
@@ -64,8 +107,7 @@ Links
 */
 
 a {
-    -webkit-transition: .2s;
-    -moz-transition: .2s;
+    -webkit-transition: .2s; -moz-transition: .2s;
     transition: .2s;
 }
 
@@ -100,13 +142,20 @@ Navigation
 ==================================
 */
 
+ nav a {
+    display: block;
+    padding: .5em 0;
+}
+
 nav ul {
     margin: 0;
     padding: 0;
+    border-top: 1px solid #CDE3F1;
 }
 
 nav li {
     list-style: none;
+    border-bottom: 1px solid #CDE3F1;
 }
 
 
@@ -117,14 +166,14 @@ Layout
 
 /* offset the fixed position header for jump links */
 section:before {
-    display:block; 
-    content:""; 
-    height:100px; 
-    margin:-100px 0 0; 
+    display: block; 
+    content: ""; 
+    height: 80px; 
+    margin: -80px 0 0; 
 }
 
 .wrap {
-    max-width: 820px;
+    max-width: 960px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -136,6 +185,7 @@ header {
     background-color: #fff;
     position: fixed;
     top: 0;
+    z-index: 99999;
 }
 
 .content {
@@ -148,6 +198,12 @@ Style
 ==================================
 */
 
+.e {
+    font-family: "Avenir Next", Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+}
+
 .intro {
     color: #75787B;
 }
@@ -157,13 +213,26 @@ footer {
     color: #75787B;
 }
 
+li h4 {
+    margin: 0;
+}
+
+.license {
+    background-color: #E7E7E6;
+    border: 1px solid #D0D0CE;
+    padding: 1em;
+    font-family: "Avenir Next Demi", Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal; 
+}
+
 /*
 Repo list
 ----------------------------------
 */
 
 .repo-list {
-    margin: 0;
+    margin: 0 0 1em 0;
     padding: 0;
 }
 
@@ -171,7 +240,6 @@ Repo list
     list-style: none;
 }
 
-.repo-list h4,
 .repo-list p {
     margin: 0;
 }
@@ -189,7 +257,7 @@ Desktop Styles
 
     aside {
         position: fixed;
-        top: 100px;
+        top: 120px;
         width: 245px;
         padding-right: 15px;
         height: 100%;
@@ -204,6 +272,20 @@ Desktop Styles
     .main-content {
         width: 67%;
         float: right;
+        margin-bottom: 120px;
+    }
+
+    /*
+    Navigation
+    ==============================
+    */
+
+    nav a:hover {
+        color: #4D5F87;
+        border-bottom: none;
+        background-color: #CDE3F1;
+        padding: 1em 0;
+        padding-left: 10px;
     }
 
     /*
@@ -229,7 +311,7 @@ Desktop Styles
         border-left: none;
     }
 
-    }
+}
 
 /*
 Mobile Styles
