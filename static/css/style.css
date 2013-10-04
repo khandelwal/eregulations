@@ -396,6 +396,7 @@ Desktop Styles
     }
 
     .repo-list li:first-child {
+        text-align: center;
         border-left: none;
         line-height: 60px;
         padding: .625em 1em;
