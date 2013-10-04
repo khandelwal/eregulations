@@ -56,11 +56,10 @@ body {
     font-family: "Avenir Next", Arial, sans-serif;
     font-weight: 400;
     font-style: normal;
-    line-height: 1.875;
+    line-height: 1.466666667;
 }
 
 h1,
-h2,
 h3,
 h4,
 h5,
@@ -80,8 +79,21 @@ h1 {
 }
 
 h2 {
+    font-family: "Avenir Next", Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 1.375em;
     margin: 1.4em 0 0 0;
+}
+
+h4 {
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+p,
+li {
+    font-size: .9375em;
 }
 
 /*
@@ -263,6 +275,34 @@ ul.repo-list {
     font-size: 0.875em;
 }
 
+.repo-list h4 {
+    text-transform: none;
+}
+
+/*
+Helper Classes
+==================================
+*/
+
+/*
+Clearfix list
+----------------------------------
+*/
+
+.group:before,
+.group:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.group:after {
+    clear: both;
+}
+
+.group {
+    *zoom: 1;
+}
+
 /*
 Desktop Styles
 ==================================
@@ -332,15 +372,35 @@ Desktop Styles
 
     .repo-list li {
         list-style: none;
-        display: table-cell;
-        vertical-align:middle;
-        padding: .625em 1em;
+        display: block;
+        float: left;
+        height: 3.75em;
+        max-height: 3.75em;
         background-color: #E7E7E6;
         border-left: 1px solid #BABBBD;
+        width: 30%;
+    }
+
+    .repo-list a:link,
+    .repo-list a:visited {
+        display: block;
+        max-height: 3.75em;
+        background-color: #E7E7E6;
+        border-bottom: none;
+        padding: .625em 1em;
+    }
+
+    .repo-list a:hover {
+        color: #4D5F87;
+        background-color: #CDE3F1;
     }
 
     .repo-list li:first-child {
+        text-align: center;
         border-left: none;
+        line-height: 60px;
+        padding: .625em 1em;
+        width: 10%;
     }
 
 }
