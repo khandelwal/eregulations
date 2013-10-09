@@ -374,8 +374,8 @@ Desktop Styles
         list-style: none;
         display: block;
         float: left;
-        height: 3.75em;
-        max-height: 3.75em;
+        height: 4.0625em;
+        max-height: 4.0625em;
         background-color: #E7E7E6;
         border-left: 1px solid #BABBBD;
         width: 30%;
@@ -384,10 +384,10 @@ Desktop Styles
     .repo-list a:link,
     .repo-list a:visited {
         display: block;
-        max-height: 3.75em;
+        max-height: 4.0625em;
         background-color: #E7E7E6;
         border-bottom: none;
-        padding: .625em 1em;
+        padding: .625em 1em 1em 1em;
     }
 
     .repo-list a:hover {
